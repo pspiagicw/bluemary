@@ -1,5 +1,5 @@
 import setuptools
-setuptootls.setup(
+setuptools.setup(
     name='BlueMary',
     version='0.0.1dev',
     author='pspiagicw',
@@ -11,7 +11,7 @@ setuptootls.setup(
     packages=setuptools.find_packages(),
     entry_points={
         'console_scripts':[
-            'bluemary=bluemary.main',
+            'bluemary=bluemary.main:run',
             ],
         },
 )

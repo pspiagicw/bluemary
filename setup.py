@@ -9,6 +9,9 @@ setuptools.setup(
     long_description_content_type='text/markdown',
     url='https://github.com/pspiagicw/bluemary',
     packages=setuptools.find_packages(),
+    install_requires=[
+        'npyscreen',
+        ],
     entry_points={
         'console_scripts':[
             'bluemary=bluemary.main:run',

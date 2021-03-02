@@ -59,28 +59,20 @@ class BluetoothController:
         if self.scan_on:
             result = subprocess.run(BLUETOOTH_DEVICE_LIST.split(),stdout=subprocess.PIPE)
             out = result.stdout.decode()
-            with open('log.txt','a') as logfile:
-                logfile.write(out)
             device_list = out.split(sep='\n')
             bluetooth_devices = list()
             for device_line in device_list[:-1]:
                 device_line = device_line.split()
-                with open('log.txt','a') as logfile:
-                    logfile.write(str(device_line))
                 bluetooth_devices.append(device_line[1] + ' - ' + device_line[2])
             return bluetooth_devices
     def get_paired_devices(self):
         if self.scan_on:
             result = subprocess.run(BLUETOOTH_PAIRED_DEVICES.split(),stdout=subprocess.PIPE)
             out = result.stdout.decode()
-            with open('log.txt','a') as logfile:
-                logfile.write(out)
             device_list = out.split(sep='\n')
             bluetooth_devices = list()
             for device_line in device_list[:-1]:
                 device_line = device_line.split()
-                with open('log.txt','a') as logfile:
-                    logfile.write(str(device_line))
                 bluetooth_devices.append(device_line[1] + ' - ' + device_line[2])
             return bluetooth_devices
     def get_connection_status(self):

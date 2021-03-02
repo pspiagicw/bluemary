@@ -1,0 +1,9 @@
+BlueMary.egg-info/
+bluemary/__pycache__/
+bluemary/argument_parser.py
+bluemary/bluetooth/__pycache__/
+bluemary/log.txt
+bluemary/ui/__pycache__/
+build/
+dist/
+log.txt
